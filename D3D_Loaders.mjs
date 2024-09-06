@@ -16,7 +16,7 @@ import { KMZLoader } from "three/examples/jsm/loaders/KMZLoader.js";
 import { KTX2Loader } from "three/examples/jsm/loaders/KTX2Loader.js";
 import { KTXLoader } from "three/examples/jsm/loaders/KTXLoader.js";
 import { LDrawLoader } from "three/examples/jsm/loaders/LDrawLoader.js";
-import { LogLuvLoader } from "three/examples/jsm/loaders/LogLuvLoader.js";
+import { UltraHDRLoader } from "three/examples/jsm/loaders/UltraHDRLoader.js";
 import { LottieLoader } from "three/examples/jsm/loaders/LottieLoader.js";
 import { LUT3dlLoader } from "three/examples/jsm/loaders/LUT3dlLoader.js";
 import { LUTCubeLoader } from "three/examples/jsm/loaders/LUTCubeLoader.js";
@@ -44,7 +44,7 @@ import { VRMLLoader } from "three/examples/jsm/loaders/VRMLLoader.js";
 import { VTKLoader } from "three/examples/jsm/loaders/VTKLoader.js";
 import { XYZLoader } from "three/examples/jsm/loaders/XYZLoader.js";
 import * as THREE from 'three';
-export * from './loaders/LogLuvLoader.js';
+export * from "./loaders/UltraHDRLoader.js";
 
 
 export default class D3DLoaders {
@@ -118,11 +118,11 @@ export default class D3DLoaders {
             break;*/
             case 'kmz': return new KMZLoader(this.loadingManager); break;
             case 'ktx2': return new KTX2Loader(this.loadingManager); break;
-            case 'ldraw','mpd': return new LDrawLoader(this.loadingManager); break;
+            case ('ldraw', 'mpd'): return new LDrawLoader(this.loadingManager); break;
             case 'lut3dl': return new LUT3dlLoader(this.loadingManager); break;
             case 'lutcube': return new LUTCubeLoader(this.loadingManager); break;
             case 'lwo': return new LWOLoader(this.loadingManager); break;
-            case 'logluv': return new LogLuvLoader(this.loadingManager); break;
+            case 'logluv': return new UltraHDRLoader(this.loadingManager); break;
             case 'lottie': return new LottieLoader(this.loadingManager); break;
             case 'md2': return new MD2Loader(this.loadingManager); break;
             case 'mdd': return new MDDLoader(this.loadingManager); break;
